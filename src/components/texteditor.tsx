@@ -62,7 +62,7 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
   };
 
   return (
-    <div className="bg-white rounded-md border p-2">
+    <div className="bg-white  p-2">
       <div className="flex flex-wrap gap-2 border-b pb-2 mb-2">
         {/* Inline Styles */}
         <button 
