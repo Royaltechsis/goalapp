@@ -11,8 +11,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "masked-icon.svg"],
       manifest: {
-        name: "My PWA App",
-        short_name: "PWA App",
+        name: "Goals Up",
+        short_name: "G Up",
         description: "A Progressive Web App built with Vite and React",
         theme_color: "#ffffff",
         background_color: "#ffffff",
