@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
-import { ArrowDownCircle, ArrowUpCircle, Bold, CheckSquare, Heading1, Italic, List, ListOrdered, Square } from "lucide-react";
-import { Editor, EditorState, RichUtils, convertToRaw } from "draft-js";
+import { ArrowDownCircle, ArrowUpCircle,  CheckSquare,  Square } from "lucide-react";
+import {  EditorState, } from "draft-js";
 import "draft-js/dist/Draft.css"; // Import Draft.js styles
 import TextEditor from "./components/texteditor";
 
@@ -31,39 +31,39 @@ export default function App() {
     setEditorState(state);
   };
 
-  const getDescriptionAsHTML = () => {
-    const contentState = editorState.getCurrentContent();
-    const blocks = contentState.getBlocksAsArray();
-    interface BlockType {
-      getText(): string;
-      getType(): string;
-    }
+  // const getDescriptionAsHTML = () => {
+  //   const contentState = editorState.getCurrentContent();
+  //   const blocks = contentState.getBlocksAsArray();
+  //   interface BlockType {
+  //     getText(): string;
+  //     getType(): string;
+  //   }
 
-    interface HTMLContent {
-      text: string;
-      type: string;
-    }
+  //   interface HTMLContent {
+  //     text: string;
+  //     type: string;
+  //   }
 
 
-    return blocks.map((block: BlockType): string => {
-      const text: string = block.getText();
-      const type: string = block.getType();
+  //   return blocks.map((block: BlockType): string => {
+  //     const text: string = block.getText();
+  //     const type: string = block.getType();
       
-      // Handle different block types
-      switch (type) {
-      case 'header-one':
-        return `<h1>${text}</h1>`;
-      case 'header-two':
-        return `<h2>${text}</h2>`;
-      case 'unordered-list-item':
-        return `<ul><li>${text}</li></ul>`;
-      case 'ordered-list-item':
-        return `<ol><li>${text}</li></ol>`;
-      default:
-        return `<p>${text}</p>`;
-      }
-    }).join('');
-  };
+  //     // Handle different block types
+  //     switch (type) {
+  //     case 'header-one':
+  //       return `<h1>${text}</h1>`;
+  //     case 'header-two':
+  //       return `<h2>${text}</h2>`;
+  //     case 'unordered-list-item':
+  //       return `<ul><li>${text}</li></ul>`;
+  //     case 'ordered-list-item':
+  //       return `<ol><li>${text}</li></ol>`;
+  //     default:
+  //       return `<p>${text}</p>`;
+  //     }
+  //   }).join('');
+  // };
 
 
   // Fetch goals from local storage on component mount
