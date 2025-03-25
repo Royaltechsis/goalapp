@@ -246,7 +246,6 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
         handleKeyCommand={handleKeyCommand}
         blockStyleFn={getBlockStyle}
         placeholder="Describe your goal..."
-        className="min-h-[150px] outline-none"
       />
     </div>
   );
