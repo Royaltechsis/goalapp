@@ -309,6 +309,7 @@ export default function App() {
             <select
               name="timeframe"
               id="timeframe"
+placeholder = "select goal duration"
               className="w-full p-2 rounded-md  text-sm sm:text-base border"
               required
             >
@@ -387,6 +388,19 @@ export default function App() {
         </div>
       </div>
     </div>
+<footer className="bg-gray-900 text-white text-center py-4">
+      <p className="text-sm">
+        © {new Date().getFullYear()}  
+        <a 
+          href="https://oseni-oluwabunmi.vercel.app/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:underline ml-1"
+        >
+          Oseni Oluwabunmi
+        </a>
+      </p>
+    </footer>
   );
 }
 
