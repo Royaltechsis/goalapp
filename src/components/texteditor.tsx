@@ -2,8 +2,7 @@
 import { Editor, RichUtils, EditorState } from 'draft-js';
 import { 
   Bold, Italic, Underline, Strikethrough, 
-  List, ListOrdered, Heading1, LinkIcon, 
-  Undo, Redo, AlignLeft, AlignCenter, AlignRight 
+  List, ListOrdered 
 } from 'lucide-react';
 import "draft-js/dist/Draft.css";
 
@@ -150,7 +149,7 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
           <ListOrdered className="h-4 w-4" />
         </button>
 
-        <button 
+        {/* <button 
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={() => toggleBlockType('header-one')}
@@ -162,10 +161,10 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
           title="Heading 1"
         >
           <Heading1 className="h-4 w-4" />
-        </button>
+        </button> */}
 
         {/* Alignment */}
-        <button 
+        {/* <button 
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={() => toggleBlockType('left')}
@@ -177,9 +176,9 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
           title="Align Left"
         >
           <AlignLeft className="h-4 w-4" />
-        </button>
+        </button> */}
 
-        <button 
+        {/* <button 
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={() => toggleBlockType('center')}
@@ -191,9 +190,9 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
           title="Align Center"
         >
           <AlignCenter className="h-4 w-4" />
-        </button>
+        </button> */}
 
-        <button 
+        {/* <button 
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={() => toggleBlockType('right')}
@@ -205,10 +204,10 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
           title="Align Right"
         >
           <AlignRight className="h-4 w-4" />
-        </button>
+        </button> */}
 
         {/* Link */}
-        <button 
+        {/* <button 
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={handleLink}
@@ -216,10 +215,10 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
           title="Add Link"
         >
           <LinkIcon className="h-4 w-4" />
-        </button>
+        </button> */}
 
         {/* Undo/Redo */}
-        <button 
+        {/* <button 
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={() => onDescriptionChange(EditorState.undo(editorState))}
@@ -237,7 +236,7 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
           title="Redo (Ctrl+Y)"
         >
           <Redo className="h-4 w-4" />
-        </button>
+        </button> */}
       </div>
 
       <Editor
