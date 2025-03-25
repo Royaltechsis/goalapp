@@ -29,23 +29,23 @@ const TextEditor = ({ editorState, onDescriptionChange }: TextEditorProps) => {
     onDescriptionChange(RichUtils.toggleInlineStyle(editorState, style));
   };
 
-  const handleLink = () => {
-    const url = window.prompt('Enter URL:');
-    if (url) {
-      const contentState = editorState.getCurrentContent();
-      const contentStateWithEntity = contentState.createEntity(
-        'LINK',
-        'MUTABLE',
-        { url }
-      );
-      const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
-      onDescriptionChange(RichUtils.toggleLink(
-        editorState,
-        editorState.getSelection(),
-        entityKey
-      ));
-    }
-  };
+//   const handleLink = () => {
+//     const url = window.prompt('Enter URL:');
+//     if (url) {
+//       const contentState = editorState.getCurrentContent();
+//       const contentStateWithEntity = contentState.createEntity(
+//         'LINK',
+//         'MUTABLE',
+//         { url }
+//       );
+//       const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
+//       onDescriptionChange(RichUtils.toggleLink(
+//         editorState,
+//         editorState.getSelection(),
+//         entityKey
+//       ));
+//     }
+//   };
 
   const getBlockStyle = (block: any) => {
     switch (block.getType()) {
